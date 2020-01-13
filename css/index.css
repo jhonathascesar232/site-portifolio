@@ -1,0 +1,282 @@
+/*
+GERAL
+*/
+
+body{
+    padding-top: 60px;
+    font-family: "Open Sans", Helvetica, Arail, sans-serif;
+    color: #4d4d4d;
+}
+h1, h2, h3{
+    margin: 0;
+    font-family: "Roboto Slab", Helvetica, Arail, sans-serif;
+    font-weight: 700;
+}
+.botao{
+    color: #f1f1f1;
+    padding: 10px 30px;
+    text-decoration: none;
+    background-color: #8f3faf;
+    border-radius: 3px;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #ac83b9;
+}
+/*
+NAVEGAÇÂO
+*/
+#menu{
+    width: 100%;
+    /* border-top: 1px solid #dee2e6; */
+    transition-property: display;
+    transition-duration: .5s;
+}
+#menu ul{
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #e1e7e7;
+}
+#menu ul li{
+    padding: .5rem 0;
+    color: #e0cde7;
+    border-bottom: 1px solid #e1e7e7;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/*
+CABEÇALHO
+*/
+
+header{
+    background-image: url(../img/lanterns-in-tokyo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+/*    color: #f1f1f1;*/
+    color: #8f2faf ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    height: 70vh;
+}
+header h1{
+    text-shadow: 0 2px 0px #8f2faf;
+    margin-top: 2rem;
+    background-color: rgba(234, 221, 238, 0.842);
+    padding: 1rem 3rem;
+    text-shadow: 1px 1px 1px rgba(184, 77, 136, 0.8);
+
+}
+header p{
+    margin-top: 2em;
+    text-shadow: 0 1px 0 #8f2faf;
+    font-weight: 900;
+    letter-spacing: .13rem;
+}
+/*
+SOBRE
+*/
+
+#sobre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px 20px;
+    color: #f1f1f1;
+    background-color: #8f2faf;
+}
+#sobre p{
+    margin-bottom: 2.5em;
+    max-width: 1000px;
+}
+#sobre .botao{
+    background-color: #f1f1f1;
+    color: #4d4d4d;
+}
+
+/*
+SERVIÇOS
+*/
+#servicos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 20px;
+}
+#servicos div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 40px;
+}
+#servicos img{
+    width: 25%;
+    height: 25%;
+    min-width: 74px;
+    min-height:74px;
+}
+
+/*
+PORTIFÓlio
+*/
+
+#portifolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0px;
+}
+#portifolio div{
+    width: 100%;
+}
+#portifolio h2{
+    margin-bottom: 20px;
+}
+#portifolio img{
+    width: 100%;
+}
+
+/*
+CONTATO
+*/
+
+#contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+#contato img{
+    width: 58px;
+}
+
+/*
+FOOTER
+*/
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: #4d4d4d;
+    color: #f1f1f1;
+}
+
+
+/*
+MEDIA QUERIES
+*/
+
+@media screen and (min-width: 768px){
+    /*
+    navegacao
+    */
+    
+    nav{
+        flex-direction: row;
+        position: relative;
+    }
+    #menu{
+        border-top: none;
+    }
+    #menu ul{
+        display: flex;
+        flex-direction: row;
+        border-top: none;
+    }
+    #menu ul li{
+        padding: 0 1rem;
+        border-bottom: none;
+    }
+    /*
+    cabecalho
+    */
+    header{
+        height: 600px;
+        height: 60vh;
+        justify-content: center;
+    }
+    
+    /*
+    sobre
+    */
+    #sobre{
+        height: 250px;
+        height: 30vh;
+        justify-content: center;
+        min-height: 250px;
+    }
+    
+    /*
+    servicos
+    */
+    #servicos{
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    #servicos h2{
+        text-align: center;
+        width: 100%;
+    }
+    #servicos div{
+        flex-grow: 1;/* ajjusta o size de acordo com os que estao em volta */
+        flex-basis: 150px;
+        padding: 0 10px;
+        max-width: 33.33%;
+
+    }
+    #servicos img{
+        width: 50%;
+        padding: 20px;
+    }
+    
+    /*
+    portifolio
+    */
+    #portifolio{
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    #portifolio div{
+        margin: 0 auto;
+        width: 33.33333%;
+    }
+    #portifolio h2{
+        width: 100%;
+        text-align: center;
+    }
+    #portifolio img{
+        width: 100%;
+    }
+    
+    /*
+    contato
+    */
+    #contato{
+        flex-direction: row;
+        flex-wrap: wrap;
+        max-width: 500px;
+        margin: 0 auto;
+        justify-content: space-around;
+    }
+    #contato h2,
+    #contato p{
+        width: 100%;
+    }
+    #contato img{
+        width: 58px;
+    }
+}
